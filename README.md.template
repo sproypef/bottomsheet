@@ -1,4 +1,4 @@
-#BottomSheet
+# BottomSheet
 
 [![Build Status](https://travis-ci.org/Flipboard/bottomsheet.svg)](https://travis-ci.org/Flipboard/bottomsheet) [![Join the chat at https://gitter.im/Flipboard/bottomsheet](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/Flipboard/bottomsheet?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
@@ -8,7 +8,7 @@ BottomSheet has been used in production at Flipboard for a while now so it is th
 
 ![FlipUI gif](http://i.imgur.com/2e3ZhoU.gif)
 
-##Installation
+## Installation
 If all you want is the BottomSheet component and don't need things from commons you can skip that dependency.
 ```groovy
 repositories {
@@ -21,7 +21,7 @@ dependencies {
 }
 ```
 
-##Getting Started
+## Getting Started
 Get started by wrapping your layout in a `BottomSheetLayout`. So if you currently have this:
 ```xml
 <LinearLayout
@@ -86,7 +86,7 @@ That's it for the simplest of use cases. Check out the [API documentation](https
 
 For more examples, also see the [Recipes](https://github.com/Flipboard/bottomsheet/wiki/Recipes) wiki.
 
-##Common Components
+## Common Components
 These are located in the optional `bottomsheet-commons` dependency and implement common use cases for bottom sheet.
 
 Intent Picker | Menu Sheet | ImagePicker Sheet
@@ -122,7 +122,7 @@ intentPickerSheet.setSortMethod(new Comparator<IntentPickerSheetView.ActivityInf
 bottomSheet.showWithSheetView(intentPickerSheet);
 ```
 
-####MenuSheetView
+### MenuSheetView
 This component presents a BottomSheet view that's backed by a menu. It behaves similarly to the new `NavigationView` in the Design support library, and is intended to mimic the examples in the Material Design spec. It supports list and grid states, with the former adding further support for separators and subheaders.
 
 Example from the sample app.
@@ -142,5 +142,5 @@ menuSheetView.inflateMenu(R.menu.create);
 bottomSheetLayout.showWithSheetView(menuSheetView);
 ```
 
-##Contributing
+## Contributing
 We welcome pull requests for bug fixes, new features, and improvements to BottomSheet. Contributors to the main BottomSheet repository must accept Flipboard's Apache-style [Individual Contributor License Agreement (CLA)](https://docs.google.com/forms/d/1gh9y6_i8xFn6pA15PqFeye19VqasuI9-bGp_e0owy74/viewform) before any changes can be merged.
