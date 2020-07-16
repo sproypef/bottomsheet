@@ -7,12 +7,12 @@ import android.support.annotation.CallSuper;
 import android.support.annotation.CheckResult;
 import android.support.annotation.IdRes;
 import android.support.annotation.Nullable;
-import android.support.v4.app.AccessFragmentInternals;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 
 import com.flipboard.bottomsheet.BottomSheetLayout;
 import com.flipboard.bottomsheet.OnSheetDismissedListener;
@@ -177,8 +177,11 @@ public final class BottomSheetFragmentDelegate implements OnSheetDismissedListen
      * @param savedInstanceState Instance state, can be null.
      */
     public void onCreate(@Nullable Bundle savedInstanceState) {
-        showsBottomSheet = AccessFragmentInternals.getContainerId(fragment) == 0;
-
+        try {
+            showsBottomSheet = ((ViewGroup) fragment.getView().getParent()).getId() == 0;
+        } catch (NullPointerException e){
+            showsBottomSheet = true;
+        }
         if (savedInstanceState != null) {
             showsBottomSheet = savedInstanceState.getBoolean(SAVED_SHOWS_BOTTOM_SHEET, showsBottomSheet);
             backStackId = savedInstanceState.getInt(SAVED_BACK_STACK_ID, -1);

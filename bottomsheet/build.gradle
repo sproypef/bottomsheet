@@ -26,11 +26,11 @@ dependencies {
 }
 
 publish {
-    userOrg = 'flipboard'
-    groupId = 'com.flipboard'
+    userOrg = 'sproypef'
+    groupId = 'com.sproypef'
     artifactId = 'bottomsheet-core'
     publishVersion = VERSION
     description = 'Android component which presents a dismissible view from the bottom of the screen'
-    website = 'https://github.com/Flipboard/bottomsheet'
+    website = 'https://github.com/sproypef/bottomsheet'
     licences = ['BSD 3-Clause']
 }

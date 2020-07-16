@@ -25,11 +25,11 @@ dependencies {
 }
 
 publish {
-    userOrg = 'flipboard'
-    groupId = 'com.flipboard'
+    userOrg = 'sproypef'
+    groupId = 'com.sproypef'
     artifactId = 'bottomsheet-commons'
     publishVersion = VERSION
     description = 'Common components library for BottomSheet'
-    website = 'https://github.com/Flipboard/bottomsheet'
+    website = 'https://github.com/sproypef/bottomsheet'
     licences = ['BSD 3-Clause']
 }
